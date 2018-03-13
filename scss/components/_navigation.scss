@@ -1,0 +1,38 @@
+//========================================================
+//Navigation
+//========================================================
+
+//target class that starts with nav
+.nav {
+  padding: 0;
+  //flexbox
+  @include flex($dir:column);
+  //media query
+  @include mq(desktop){
+    flex-direction: row;
+  }
+  //include .nav__item
+  @include e(item) {
+    list-style-type: none;
+    flex: 1;
+    //target child of .nav__item (the links)
+    * {
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      @include text($family:$font-secondary,$weight:800,$color:$color-primary);
+      padding: 10px;
+      border-radius: 10px;
+      @extend %tr;
+      &:hover{
+        background-color: $color-secondary;
+        opacity: 0.8;
+        color: darken($sail,50%);
+      }
+      &:focus{
+        @extend %out;
+        background-color: $color-secondary;
+      }
+    }
+  }
+}

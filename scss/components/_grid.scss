@@ -1,0 +1,59 @@
+//========================================================
+//Grid
+//========================================================
+
+//include theme-colors for grids
+@include theme-colors($grid-colors);
+
+//Turn grid__col into flexbox and style it.
+[class^="grid__col--"] {
+  //flexbox
+  @include flex($dir:column);
+  margin: 20px 0;
+  @include text($font-primary, $l-height: 1.4em);
+}
+
+.grid {
+  //Turn grid__row into flexbox
+  @include e(row) {
+    margin: 30px 0;
+    //flexbox
+    @include flex($dir:column) {
+      flex:1;
+    }
+    //media query
+    @include mq(desktop) {
+      flex-direction: row;
+    }
+  }
+
+  @include e(col) {
+    //shift the navigation to the right
+    @include m(9) {
+      > [role=navigation] {
+      //media query
+        @include mq(desktop){
+          margin: auto 0;
+          margin-left: 20%;
+        }
+      }
+    }
+    //adjust flexbox layout to layout buttons
+    @include m(12) {
+      //media query
+      @include mq(desktop) {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    //center .grid__col--7
+    @include m(7) {
+      &.centered {
+        //media query
+        @include mq(desktop){
+          margin: auto;
+        }
+      }
+    }
+  }
+}

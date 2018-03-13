@@ -1,0 +1,47 @@
+//========================================================
+//Typography
+//========================================================
+
+//style the container
+.container {
+  margin: 10%;
+  background-image: linear-gradient($dew,$alice,$tutu,$alice,$dew);
+}
+
+//target the links
+.link {
+  text-decoration: none;
+  @include text($weight:800,$color:$color-primary);
+}
+
+//taget class that starts with headline
+.headline {
+  //target .headline--primary
+  @include m(primary) {
+    margin-left: 1.5em;
+    @include text($font-headline,
+                  $size:2em,
+                  $l-height:1.3em,
+                  $color:$color-primary);
+  }
+  //target .headline--secondary
+  @include m(secondary) {
+    @include text($font-headline,
+                  $l-height:1.3em,
+                  $color: $color-headline);
+    @extend %box;
+  }
+}
+
+//target .blockquote
+.blockquote {
+  @include text($font-blockquote, $l-height: 1.3em,$size:1.5em);
+  border-radius: 10px;
+  border-left: 5px solid $color-secondary;
+  padding: 0.8em;
+  font-style: italic;
+  @extend %tr;
+  &:hover{
+    border-color:$color-primary;
+  }
+}

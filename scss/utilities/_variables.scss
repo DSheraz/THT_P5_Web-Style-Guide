@@ -1,0 +1,68 @@
+//========================================================
+//Variables
+//========================================================
+
+//fonts
+//import fonts from Google
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans|Noto+Sans|Play|Source+Sans+Pro');
+
+$font-headline: 'Merriweather Sans', sans-serif;
+$font-blockquote: 'Play', sans-serif;
+$font-primary: 'Noto Sans', sans-serif;
+$font-secondary: 'Source Sans Pro', sans-serif;
+
+$font-size-default: 16px;
+
+//descriptive colors
+$manhattan: #F5BEA6;
+$manhattan-dark: darken($manhattan, 20%);
+$golden: #FFCB66;
+$golden-dark: darken($golden, 20%);
+$dolly: #FFFA87;
+$dolly-dark: darken($dolly, 20%);
+$gossip: #C8FAC3;
+$gossip-dark: darken($gossip, 20%);
+$lilac: #E8B9ED;
+$lilac-dark: darken($lilac, 20%);
+$charlotte: #ABFAE2;
+$charlotte-dark: darken($charlotte, 20%);
+$thistle: #CCC6AB;
+$sail: #AFD4FA;
+$sail-dark: darken($sail, 20%);
+$dew: #EFFFFF;
+$alice: #F8FCFF;
+$tutu: #FFF9FE;
+
+//functional colors
+$color-primary: darken($charlotte,50%);
+$color-secondary: $charlotte;
+$color-headline: $manhattan-dark;
+
+//breakpoints
+$brkpoint-sm: 1px;
+$brkpoint-md: 769px;
+$brkpoint-lg: 1400px;
+
+//========================================================
+//Map Styles
+//========================================================
+
+//grid-colors
+$grid-colors: (
+  col--3: $gossip,
+  col--4: $dolly,
+  col--5: $manhattan,
+  col--6: $golden,
+  col--7: $sail,
+  col--8: $lilac,
+  col--12: $charlotte,
+);
+
+//button-colors
+$btn-colors: (
+  default: $gossip-dark,
+  success: $dolly-dark,
+  error: $manhattan-dark,
+  warning: $golden-dark,
+  info: $sail-dark,
+);

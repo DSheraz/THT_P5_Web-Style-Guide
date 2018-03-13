@@ -1,0 +1,28 @@
+//========================================================
+//Buttons
+//========================================================
+
+//include theme-colors for buttons
+@include theme-colors($btn-colors);
+
+//style every class that starts with btn--
+[class^="btn--"] {
+  @include text($font-secondary,$size:1.1em);
+  @extend %box;
+  text-transform: uppercase;
+  max-width: 100%;
+  border-radius: 10px;
+  border: none;
+  @extend %tr;
+  //media query
+  @include mq(desktop){
+    flex:1;
+  }
+  &:hover {
+    @extend %hover;
+  }
+  &:focus {
+    @extend %hover;
+    border: 2px solid lighten($thistle,30%);
+  }
+}

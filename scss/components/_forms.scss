@@ -1,0 +1,30 @@
+//========================================================
+//Forms
+//========================================================
+
+//Turn form into flexbox
+.form {
+  //flexbox
+  @include flex($dir:column);
+  //include form__label--hidden and hide it
+  @include e(label) {
+    @include m(hidden) {
+      display: none;
+    }
+  }
+  //include .form__input
+  @include e(input) {
+    @extend %box;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid $color-secondary;
+    @extend %tr;
+    &:hover {
+      @extend %out;
+      border-bottom: 3px solid $color-primary;
+    }
+    &:focus {
+      @extend %out;
+    }
+  }
+}

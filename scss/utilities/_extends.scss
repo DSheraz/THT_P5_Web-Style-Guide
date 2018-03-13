@@ -1,0 +1,25 @@
+//========================================================
+//Extends
+//========================================================
+
+//give margin and padding to elements
+%box {
+  margin: 10px;
+  padding: 15px;
+}
+
+//transtion for transform
+%tr {
+  transition:all .5s;
+}
+
+//No outline when :focus
+%out {
+  outline:none;
+}
+
+//Give opacity and no outline when :hover
+%hover{
+  opacity: 0.7;
+  @extend %out;
+}

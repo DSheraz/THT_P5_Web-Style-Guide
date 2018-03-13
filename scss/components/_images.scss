@@ -1,0 +1,30 @@
+//========================================================
+//Images
+//========================================================
+
+//target class that starts with img
+.img {
+  //target .img--logo and turn it into flexbox
+  @include m(logo) {
+    //flexbox
+    @include flex;
+      padding: 20px;
+      margin:auto;
+  }
+  //target .img--logo
+  @include m(avatar) {
+    width:200px;
+    align-self: center;
+    margin:auto;
+    @extend %tr;
+    &:hover{
+      transform: rotate(5deg);
+    }
+  }
+  //target .img--logo
+  @include m(frame) {
+    border: 1px solid $color-primary;
+    padding: 15px;
+    width: 100%;
+  }
+}

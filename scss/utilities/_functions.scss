@@ -1,0 +1,23 @@
+//========================================================
+//Functions
+//========================================================
+
+//target each grid from 2 to 12
+@for $i from 2 through 12 {
+  //Style .grid--col for Grid System
+  .grid__col--#{$i}.theme__colors {
+    padding: 1.5em;
+    margin: 0.3em;
+    border-radius: 10px;
+    @include mq(desktop){
+      text-align: center;
+    }
+  }
+  //Style every .grid__col
+  .grid__col--#{$i} {
+    flex-grow: $i;
+    @include mq(desktop){
+      max-width: (($i / 12) * 100%);
+    }
+  }
+}
